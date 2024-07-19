@@ -1,21 +1,21 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro";
-const EXPERIENCIE = [
+const EXPERIENCE = [
   {
-    date: "12-03-2024/18-06-2024",
-    title: "Desarrollador Full-Stack",
-    company: "Hospital Universitario Virgen del Rocío(Sevilla)",
+    date: "03-12-2024/06-18-2024",
+    title: "Full-Stack Developer",
+    company: "Virgen del Rocío University Hospital (Seville)",
     description:
-      "Durante mi período de prácticas en el Grupo de Informática de la Salud Computacional(GISC) en el Hospital Universitario Virgen del Rocío, adquirí experiencia práctica en diversastecnologías clave. Trabajé con:React.js y Next.js para el desarrollo de interfaces de usuario dinámicas y eficientes.Node.js y Express para la creación de aplicaciones del lado del servidor robustas y escalables. MongoDB y NoSQL para la gestión de bases de datos no relacionales, optimizando el almacenamiento y la recuperación de datos.",
+      "During my internship at the Computational Health Informatics Group (GISC) at Virgen del Rocío University Hospital, I gained practical experience in various key technologies. I worked with: React.js and Next.js for developing dynamic and efficient user interfaces. Node.js and Express for creating robust and scalable server-side applications. MongoDB and NoSQL for managing non-relational databases, optimizing data storage and retrieval.",
   },
 ];
 ---
 
 <ol class="relative mt-16">
   {
-    EXPERIENCIE.map((experiencie) => (
+    EXPERIENCE.map((experience) => (
       <li class="">
-        <ExperienceItem {...experiencie} />
+        <ExperienceItem {...experience} />
       </li>
     ))
   }
