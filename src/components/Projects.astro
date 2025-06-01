@@ -1,9 +1,10 @@
 ---
 import GitHub from "./icons/GitHub.astro";
 import NextJS from "./icons/NextJS.astro";
-import Angular from "./icons/Angular.astro";
-import Boostrap from "./icons/Boostrap.astro";
+import SpringBoot from "./icons/SpringBoot.astro";
+import React from "./icons/React.astro";
 import Tailwind from "./icons/Tailwind.astro";
+import Java from "./icons/Java.astro";
 import Link from "./icons/Link.astro";
 import LinkButton from "./LinkButton.astro";
 
@@ -13,59 +14,65 @@ const TAGS = {
     class: "bg-black text-white",
     icon: NextJS,
   },
+  REACT: {
+    name: "React",
+    class: "bg-[#61DAFB] text-black",
+    icon: React,
+  },
   TAILWIND: {
     name: "Tailwind CSS",
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
-  BOOSTRAP: {
-    name: "Boostrap CSS",
-    class: "bg-[#003159] text-white",
-    icon: Boostrap,
+  SPRINGBOOT: {
+    name: "Spring Boot",
+    class: "bg-[#6DB33F] text-white",
+    icon: SpringBoot,
   },
-  ANGULAR: {
-    name: "Angular",
-    class: "bg-[#eda6ac] text-white",
-    icon: Angular,
+  JAVA: {
+    name: "Java",
+    class: "bg-[#ED8B00] text-white",
+    icon: Java,
   },
 };
+
 const PROJECTS = [
   {
-    title: "RISE2TOP - A landing creator WebApp",
+    title: "RISE2TOP - Landing Creator WebApp",
     description:
-      "Rise2Top is a company project based on personal developmnet creating landing for companies",
+      "Rise2Top is a company project focused on personal development, creating professional landing pages for companies and entrepreneurs.",
     link: "https://www.rise2top.es",
-    github: "https://github.com/cpcx04/MovieHub-Project",
-    image: "/projects/image.png",
+    image: "/projects/rise2top.png",
     tags: [TAGS.NEXT, TAGS.TAILWIND],
   },
   {
-    title: "MOVIEHUB - A full review of all the Series and Films",
+    title: "La Tienda by Quiosco Sarita - E-commerce Platform",
     description:
-      "Movie library. Consumes the API from TMDB. Created from scratch with Angular, Node, and Boostrap.",
-    link: "https://movie-hub-project-ten.vercel.app/home",
-    image: "/projects/movieHub.png",
-    tags: [TAGS.ANGULAR, TAGS.BOOSTRAP],
+      "Complete e-commerce solution developed with a teammate. Features full payment integration with Stripe, inventory management, and modern UI/UX design.",
+    link: "https://www.latiendabyquioscosarita.com/",
+    github: "https://github.com/cpcx04/tienda-quiosco-sarita",
+    image: "/projects/tienda-sarita.png",
+    tags: [TAGS.JAVA, TAGS.SPRINGBOOT, TAGS.NEXT, TAGS.REACT],
   },
   {
-    title: "Prophecia - Stroke Detection Software",
+    title: "Medical Software - Hospital Virgen del Rocío",
     description:
-      "Software focused on medical use to facilitate diagnosis in stroke detection.",
-    link: "https://prophecia-gisc.vercel.app/prophecia",
-    image: "/projects/descarga.png",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "Professional medical software development for healthcare use, focusing on improving patient care and hospital workflow efficiency.",
+    image: "/projects/medical-software.png",
+    tags: [TAGS.NEXT, TAGS.REACT, TAGS.TAILWIND],
+    isPrivate: true,
   },
 ];
 ---
 
 <div class="flex flex-col gap-y-16">
   {
-    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+    PROJECTS.map(({ image, title, description, tags, link, github, isPrivate }) => (
       <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
         <div class="w-full md:w-1/2">
           <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
             <img
-              alt="Newcomer vs 5 years in New Zealand"
+              alt={title}
               class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
               loading="lazy"
               src={image}
@@ -106,6 +113,11 @@ const PROJECTS = [
                   <Link class="size-4" />
                   Preview
                 </LinkButton>
+              )}
+              {isPrivate && (
+                <span class="text-xs text-gray-500 dark:text-gray-400 italic">
+                  Private/Professional Project
+                </span>
               )}
             </footer>
           </div>

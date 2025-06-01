@@ -9,27 +9,26 @@ const personalImageAlt = "Cristian Pulido";
     class="[&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
   >
     <p>
-      Hello! I'm Cristian Pulido, a passionate application developer. I recently
-      completed my higher degree in Application Development at Salesianos de
-      Triana (Seville), where I gained solid technical and practical training in
-      programming and software development. I am currently <strong
-        >opening borders to specialize in a specific technology</strong
-      >.
+      Hello! I'm Cristian Pulido, a passionate application developer currently working at 
+      <strong>Hospital Virgen del Rocío in Seville</strong>, where I develop medical software 
+      solutions to improve healthcare processes and patient care. I completed my higher degree 
+      in Application Development at Salesianos de Triana (Seville), gaining solid technical 
+      and practical training in programming and software development.
     </p>
 
     <p>
-      During my studies, I acquired solid knowledge in <strong
-        >HTML, CSS, JAVA, NEXT, TAILWIND, SPRINGBOOT, BOOSTRAP, NODE, DOCKER,
-        SQL and NO-SQL Databases, NODE, and EXPRESS</strong
-      >. Nowadays, I am trying to specialize in any technology to become an
-      expert in my field.
+      With over <strong>one year of professional experience</strong>, I have mastered 
+      technologies including <strong>TypeScript, JavaScript, React, Next.js, Java, 
+      Spring Boot, Docker, Tailwind CSS, HTML, CSS, SQL and NoSQL Databases, Node.js, 
+      and Express</strong>. I continuously expand my skill set to stay current with 
+      modern development practices and emerging technologies.
     </p>
 
     <p>
-      As a software developer, <strong
-        >I have a wide variety of projects visible on my GitHub
-      </strong>. My goal is to find a place in the job market and get an
-      opportunity that allows me to grow both professionally and personally.
+      As a software developer, <strong>I have developed various projects ranging from 
+      e-commerce platforms to medical software</strong>, all visible on my GitHub. 
+      My professional experience includes creating robust, scalable applications that 
+      solve real-world problems in both commercial and healthcare environments.
     </p>
   </div>
 
@@ -42,3 +41,71 @@ const personalImageAlt = "Cristian Pulido";
     style="object-position: 50% 50%"
   />
 </article>
+
+---
+// Experience.astro - New component to add your work experience
+---
+
+<div class="flex flex-col gap-y-8">
+  <article class="flex flex-col space-y-4 p-6 rounded-lg border border-gray-200 dark:border-gray-700 bg-white/50 dark:bg-gray-800/50">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+      <div>
+        <h3 class="text-xl font-bold text-gray-800 dark:text-gray-100">
+          Software Developer
+        </h3>
+        <h4 class="text-lg font-semibold text-blue-600 dark:text-blue-400">
+          Hospital Virgen del Rocío - Seville
+        </h4>
+      </div>
+      <div class="text-sm text-gray-600 dark:text-gray-400 mt-2 md:mt-0">
+        2024 - Present (1+ year)
+      </div>
+    </div>
+    
+    <div class="text-gray-700 dark:text-gray-300">
+      <p class="mb-3">
+        Developing specialized medical software solutions to enhance healthcare processes 
+        and improve patient care efficiency within one of Andalusia's largest hospital networks.
+      </p>
+      
+      <ul class="list-disc pl-5 space-y-1">
+        <li>Design and implement medical software applications using modern web technologies</li>
+        <li>Work with healthcare professionals to understand and solve complex medical workflow challenges</li>
+        <li>Utilize TypeScript, React, Next.js, and Docker for scalable application development</li>
+        <li>Collaborate in multidisciplinary teams to deliver high-quality, reliable healthcare solutions</li>
+      </ul>
+    </div>
+
+    <div class="flex flex-wrap gap-2 mt-4">
+      <span class="px-3 py-1 text-xs rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">TypeScript</span>
+      <span class="px-3 py-1 text-xs rounded-full bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">React</span>
+      <span class="px-3 py-1 text-xs rounded-full bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200">Next.js</span>
+      <span class="px-3 py-1 text-xs rounded-full bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200">Docker</span>
+      <span class="px-3 py-1 text-xs rounded-full bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200">JavaScript</span>
+    </div>
+  </article>
+
+  <article class="flex flex-col space-y-4 p-6 rounded-lg border border-gray-200 dark:border-gray-700 bg-white/50 dark:bg-gray-800/50">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+      <div>
+        <h3 class="text-xl font-bold text-gray-800 dark:text-gray-100">
+          Development Intern
+        </h3>
+        <h4 class="text-lg font-semibold text-blue-600 dark:text-blue-400">
+          Various Companies - Seville
+        </h4>
+      </div>
+      <div class="text-sm text-gray-600 dark:text-gray-400 mt-2 md:mt-0">
+        2023 (3 months)
+      </div>
+    </div>
+    
+    <div class="text-gray-700 dark:text-gray-300">
+      <p>
+        Completed internship program as part of higher education in Application Development, 
+        gaining hands-on experience in real-world software development environments and 
+        professional team collaboration.
+      </p>
+    </div>
+  </article>
+</div>
