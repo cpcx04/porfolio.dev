@@ -11,28 +11,27 @@ import LinkButton from "./LinkButton.astro";
 const TAGS = {
   NEXT: {
     name: "Next.js",
-    class: "bg-black text-white",
-    icon: NextJS,
+    class: "border-2 border-white text-white hover:bg-black hover:text-white",
   },
   REACT: {
     name: "React",
-    class: "bg-[#61DAFB] text-black",
-    icon: React,
+    class:
+      "border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white",
   },
   TAILWIND: {
     name: "Tailwind CSS",
-    class: "bg-[#003159] text-white",
-    icon: Tailwind,
+    class:
+      "border-2 border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white",
   },
   SPRINGBOOT: {
     name: "Spring Boot",
-    class: "bg-[#6DB33F] text-white",
-    icon: SpringBoot,
+    class:
+      "border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white",
   },
   JAVA: {
     name: "Java",
-    class: "bg-[#ED8B00] text-white",
-    icon: Java,
+    class:
+      "border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white",
   },
 };
 
@@ -42,7 +41,7 @@ const PROJECTS = [
     description:
       "Rise2Top is a company project focused on personal development, creating professional landing pages for companies and entrepreneurs.",
     link: "https://www.rise2top.es",
-    image: "/projects/rise2top.png",
+    image: "/projects/image.png",
     tags: [TAGS.NEXT, TAGS.TAILWIND],
   },
   {
@@ -53,7 +52,7 @@ const PROJECTS = [
     github: "https://github.com/cpcx04/tienda-quiosco-sarita",
     image: "/projects/quioscosarita.png",
     tags: [TAGS.JAVA, TAGS.SPRINGBOOT, TAGS.NEXT, TAGS.REACT],
-  }
+  },
 ];
 ---
 
@@ -81,9 +80,8 @@ const PROJECTS = [
               {tags.map((tag) => (
                 <li>
                   <span
-                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                    class={`inline-block rounded-full text-xs font-medium transition-all duration-200 ${tag.class} py-2 px-4`}
                   >
-                    <tag.icon class="size-4" />
                     {tag.name}
                   </span>
                 </li>
@@ -106,7 +104,6 @@ const PROJECTS = [
                   Preview
                 </LinkButton>
               )}
-              
             </footer>
           </div>
         </div>
